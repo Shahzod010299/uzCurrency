@@ -25,4 +25,14 @@
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="uz.coders.currency.ui.IntroFragment"
+        android:label="fragment_intro"
+        tools:layout="@layout/fragment_intro" />
+    <fragment
+        android:id="@+id/canverterFragment"
+        android:name="uz.coders.currency.ui.CanverterFragment"
+        android:label="fragment_canverter"
+        tools:layout="@layout/fragment_canverter" />
 </navigation>

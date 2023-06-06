@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.ConverterFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/main_color" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:importantForAccessibility="no"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@id/btnBack"
+                android:fontFamily="@font/inter"
+                android:text="@string/fragment_title_converter"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                tools:ignore="RelativeOverlap,SpUsage" />
+
+            <ImageButton
+                android:id="@+id/btnShare"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="24dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:importantForAccessibility="no"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/share"
+                tools:ignore="TouchTargetSizeCheck" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardUseCompatPadding="true"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/secondary_color"
+            android:layout_weight="1"
+            app:cardCornerRadius="16dp"
+            tools:ignore="NestedWeights">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:id="@+id/tvAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="@string/amount"
+                        android:textSize="18dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="12dp"
+                        android:textColor="#989898"
+                        tools:ignore="SpUsage" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvAmount"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinnerFirstCurrency"
+                            android:layout_marginStart="12dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"/>
+
+                        <EditText
+                            android:id="@+id/edAmount"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/edit_bg_style"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/line"
+                        android:layout_marginHorizontal="18dp"
+                        android:importantForAccessibility="no" />
+
+                    <ImageButton
+                        android:id="@+id/btnConvert"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/exchange"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no" />
+
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:id="@+id/tvConvertedAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="@string/converted_amount"
+                        android:textSize="18dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="12dp"
+                        android:textColor="#989898"
+                        tools:ignore="SpUsage" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvConvertedAmount"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinnerSecondCurrency"
+                            android:layout_marginStart="12dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"/>
+
+                        <EditText
+                            android:id="@+id/edConvertedAmount"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="12dp"
+                            android:background="@drawable/edit_bg_style"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardUseCompatPadding="true"
+            android:backgroundTint="@color/secondary_color"
+            android:layout_weight="1">
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>
